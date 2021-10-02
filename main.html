@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+ 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-viewport-checker/1.8.8/jquery.viewportchecker.min.js" type="text/javascript"></script>
+    <script src="flickity/flickity.pkgd.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <a href="index.html"><img id="logo" src="images/tekoJSlight.png" alt="logo"></a>
+        <nav id="desktopMenu">
+            <ul id="menu">
+                <li class="menu-item-container"> <a class="menu-item" href="#intro">Intro</a></li>
+                <li class="menu-item-container"> <a class="menu-item" href="#me">Me</a></li>
+                <li class="menu-item-container"> <a class="menu-item" href="#stats">Stats</a></li>
+                <li class="menu-item-container"> <a class="menu-item" href="#about">About</a></li>
+                <li class="menu-item-container"> <a class="menu-item" href="#journey">Journey</a></li>
+                <li class="menu-item-container"> <a class="menu-item" href="#experience">Experience</a></li>
+                <li class="menu-item-container"> <a class="menu-item" href="#portfolio">Portfolio</a></li>
+                <li class="menu-item-container"> <a href="cv.pdf" class="menu-item">C.V</a></li>
+            </ul>
+        </nav>
+        <div class="openMenuButton" onclick="openNav()"><a>[Open Menu]</a></div>
+        <nav class="mobileMenu">
+            <ul>
+                <div class="closeMenuButton" onclick="closeNav()"><a class="darkText">[Close Menu]</a></div>
+                <li class="menu-item-container"> <a class="menu-item darkText" href="#intro">Intro</a></li>
+                <li class="menu-item-container"> <a class="menu-item darkText" href="#me">Me</a></li>
+                <li class="menu-item-container"> <a class="menu-item darkText" href="#stats">Stats</a></li>
+                <li class="menu-item-container"> <a class="menu-item darkText" href="#about">About</a></li>
+                <li class="menu-item-container"> <a class="menu-item darkText" href="#journey">Journey</a></li>
+                <li class="menu-item-container"> <a class="menu-item darkText" href="#experience">Experience</a></li>
+                <li class="menu-item-container"> <a class="menu-item darkText" href="#portfolio">Portfolio</a></li>
+                <li class="menu-item-container"> <a href="cv.pdf" class="menu-item">C.V</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="fullscreen">
+        <a id="intro"></a>
+        <div class="centerContainer hidden">
+            <!-- <img id="me" src="images/mono-me-transbackgroundHalf.png"> -->
+            <div>
+                <p class="preHeading">My name is</p>
+                <h1 class="headline mainHeading">Jason Smith</h1>
+                <h2 class="headline">I'm a full stack developer<br>
+                </h2>
+                <p class="maxWidthText">
+                    I'm <span id="myAge"></span> 
+                    years old and I'm a super keen coder hoping to expand on my knowedge in various programming languages so that I can use them in a professional capacity.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="fullscreen">
+        <a id="me"></a>
+        <div class="centerContainer center hidden">
+            <div class="portrait">
+                <img id="me" src="images/mono-me.jpg">
+            </div>    
+            </div> 
+    </section>  
+
+
+
+
+    <section class="fullscreen">
+        <a id="stats"></a>
+                <div class="centerContainer center hidden">
+                    <h2 class="headline">My Stats</h2>
+                    <h2 class="stats">
+                        <span class="statsDescription">HTML:</span>[||||||||||||||||||<span class="backgroundColour">||</span>]<br>
+                        <span class="statsDescription">CSS:</span>[|||||||||||||||||<span class="backgroundColour">|||</span>]<br>
+                        <span class="statsDescription">Javascript:</span>[|||||||||||||<span class="backgroundColour">|||||||</span>]<br>
+                        <span class="statsDescription">Jquery:</span>[|||||||||||||<span class="backgroundColour">|||||||</span>]<br>
+                        <span class="statsDescription">Electron:</span>[|||||||||||||<span class="backgroundColour">|||||||</span>]<br>
+                        <span class="statsDescription">Node:</span>[|||||||||||||<span class="backgroundColour">|||||||</span>]<br>
+                        <span class="statsDescription">Angular:</span>[|||||||||||||<span class="backgroundColour">|||||||</span>]<br>
+                        <span class="statsDescription">React:</span>[|||||||||||||<span class="backgroundColour">|||||||</span>]<br>
+                        <span class="statsDescription">PHP:</span>[|||<span class="backgroundColour">|||||||||||||||||</span>]<br>
+                        <span class="statsDescription">Python:</span>[|||||||||||||<span class="backgroundColour">|||||||</span>]<br>
+                        <span class="statsDescription">SQL:</span>[||||<span class="backgroundColour">||||||||||||||||</span>]<br>
+                        <span class="statsDescription">GIT:</span>[||||||<span class="backgroundColour">||||||||||||||</span>]<br>
+                    </h2>
+                </div>
+    </section>
+    <section class="fullscreen">
+        <a id="about"></a>
+            <div class="centerContainer hidden">
+                <h2 class="headline">Hi guys</h2>
+                <p class="textBlock">
+                    So what got me into coding you ask?
+                    <br><br>
+                    Short answer, gaming.<br>
+                    I'm a huge fan of real time strategies games, action RPG's and occasionally I play first person shooter's (very badly).
+                    Curiosity took over in my early 30's, which made me want to know more about how games were made, I also took that same curious aproach to certain aspects of my business.
+                    Whilst there are plenty of platforms available to make building and maintaining a website as codeless and effortless as possible,
+                    I still wanted to get more involved in the process and to gain some knowledge. I learnt about HTML, CSS, Javascript and some PHP.
+                    It wasn't nessecary for me to learn this, I just felt like it would have been beneficial to know it.
+                </p>
+                    <div class="hobbiesPersonality">
+                        <div>
+                            <h4 class="headline">Hobbies</h4>
+                            <p class="textBlock">
+                                Gaming<br>
+                                Real Time Strategy<br>
+                                Spending Time with my family<br>
+                                Learning<br>
+                                Art<br>
+            
+                            </p>
+                        </div>
+                        <div>
+                            <h4 class="headline">Personality</h4>
+                            <p class="textBlock">
+                                Honest<br>
+                                easy-going<br>
+                                polite<br>
+                                Optimist<br>
+                                Introverted
+                            </p>
+                        </div>
+                    </div>
+            </div>
+    </section>
+        
+
+    <section class="fullscreen">
+        <a id="journey"></a>
+        <div class="centerContainer hidden">
+            <h2 class="headline">So what have I been up to</h2>
+            <p class="textBlock">
+                Planning my transition to becoming a
+                For the past 10 years I've been self employed, running both a physical & online artist materials shop. It's my current occupation, and
+                I had been feeling some pretty deep regret regarding a decision I made when I left school. The decision being the courses that I decided to take (Graphic design & Fine art).
+                Since I really wasn't sure what I wanted to do, I decided to persue a path in a subject that I excelled in, which turned out to be a bad decision.
+                I've planned ahead to run this business with minimal effort leaving
+                about 6 hours a day to study at work. So why on earth would I want to quit my business?
+            </p>
+        </div>
+        <div class="centerContainer hidden">
+            <h2 class="headline">Learning</h2>
+            <p class="textBlock">
+                I gained knowledge from several sources at different stages of my learning.
+                When I first started learning, I found <a class="textLink" href="https://www.udemy.com/">Udemy</a> and decided to give that a go attempting to learn C#, came across some good courses, and some bad ones too.
+                I also found some helpful channels on Youtube which assisted with learning.<br>
+                <a class="textLink" href="https://www.youtube.com/user/programmingwithmosh">Learning With Mosh</a><br>
+                <a class="textLink" href="https://www.youtube.com/channel/UC4xKdmAXFh4ACyhpiQ_3qBw">TechLead</a><br>
+                <a class="textLink" href="https://www.youtube.com/channel/UCxX9wt5FWQUAAz4UrysqK9A">CS Dojo</a><br>
+                <a class="textLink" href="https://www.packtpub.com/">www.packt.com</a>, which is an online book store specialising in code and technology. I'm currently subscribed, and have access to their entire library.
+                Eventually I decided that I wanted to take this seriously, and I built up enough confidence to feel like I could do a course. I chose <a class="textLink" href="https://itcareerswitch.co.uk">IT Career Switch</a>
+                This then lead me onto <a class="textLink" href="https://www.codecademy.com/">Code Academy</a> a fantastic resourse for learning.<br>
+                I also refer to resoures such as <a class="textLink" href="https://codepen.io/">Codepen</a> and <a class="textLink" href="https://stackoverflow.com/">Stackoverflow</a>
+            </p>
+        </div>
+        </div>
+    </section>
+
+    <section class="fullscreen">
+        <a id="experience"></a>
+        <div class="centerContainer hidden">
+            <h2 class="headline">Experience</h2>
+            <p class="textBlock">
+                I'm at the beginning of changing my career which means I have no experience working as a full stack developer in a professional capacity,
+                I'm at a stage where I am ready to enter my first role and what experience I do have has been gained through learning, and building my portfolio.
+                I hope some of the projects I've built interest you and I would certainly love some feedback. You can check my projects out below
+            </p>
+        </div>
+    </section>    
+
+
+    <section>
+        <a id="portfolio"></a>    
+        <div class="carousel">
+
+            <div class="carousel-cell" id="slideOne">
+                <div>
+                    <div class="projectImage">
+                        <img src="images/portfolio-images/website.jpg" class="portfolioImage">
+                    </div>
+                    <p class="featureProjectTitle">Portfolio Website</p>
+                    <p class="featureProjectSubTitle">Project objective:</p>
+                    <p class="featureProjectDescription">Provide an optimised, well presented, easy to navigate website which contains direct links to my portfolio projects in Github.</p>
+                    <p class="featureProjectSubTitle">Technologies used:</p>
+                    <p class="featureProjectDescription">HTML, CSS, Javascript</p>
+                </div>
+                <div class="gitProjectLinkContainer"><a class="menu-item" href="https://github.com/Jason-Smith-Code/" target="_blank">github</a></div>
+            </div>    
+
+            <div class="carousel-cell" id="slideOne">
+                <div>
+                    <div class="projectImage">
+                        <img src="images/portfolio-images/website.jpg" class="portfolioImage">
+                    </div>
+                    <p class="featureProjectTitle">To-do App</p>
+                    <p class="featureProjectSubTitle">Project objective:</p>
+                    <p class="featureProjectDescription">An application which allows users to create, edit, delete and save short strings in the form of a to-do list.</p>
+                    <p class="featureProjectSubTitle">Technologies used:</p>
+                    <p class="featureProjectDescription">HTML, CSS, Javascript, Electron, SQL</p>
+                </div>
+                <div class="gitProjectLinkContainer"><a class="menu-item" href="https://github.com/Jason-Smith-Code/" target="_blank">github</a></div>
+            </div>    
+
+            <div class="carousel-cell" id="slideOne">
+                <div>
+                    <div class="projectImage">
+                        <img src="images/portfolio-images/website.jpg" class="portfolioImage">
+                    </div>
+                    <p class="featureProjectTitle">Chat Room App</p>
+                    <p class="featureProjectSubTitle">Project objective:</p>
+                    <p class="featureProjectDescription">To create an application which allows users to login, and connect to a chat room. Users can send and view messages.</p>
+                    <p class="featureProjectSubTitle">Technologies used:</p>
+                    <p class="featureProjectDescription">HTML, CSS, Javascript, React</p>
+                </div>
+                <div class="gitProjectLinkContainer"><a class="menu-item" href="https://github.com/Jason-Smith-Code/" target="_blank">github</a></div>
+            </div>    
+
+            <div class="carousel-cell" id="slideOne">
+                <div>
+                    <div class="projectImage">
+                        <img src="images/portfolio-images/website.jpg" class="portfolioImage">
+                    </div>
+                    <p class="featureProjectTitle">Portfolio Website</p>
+                    <p class="featureProjectSubTitle">Project objective:</p>
+                    <p class="featureProjectDescription">Provide a well presented, easy to navigate, optimised single page site which contains direct links to my portfolio projects in Github.</p>
+                    <p class="featureProjectSubTitle">Technologies used:</p>
+                    <p class="featureProjectDescription">HTML, CSS, Javascript</p>
+                </div>
+                <div class="gitProjectLinkContainer"><a class="menu-item" href="https://github.com/Jason-Smith-Code/" target="_blank">github</a></div>
+            </div>    
+
+            <div class="carousel-cell" id="slideOne">
+                <div>
+                    <div class="projectImage">
+                        <img src="images/portfolio-images/website.jpg" class="portfolioImage">
+                    </div>
+                    <p class="featureProjectTitle">Portfolio Website</p>
+                    <p class="featureProjectSubTitle">Project objective:</p>
+                    <p class="featureProjectDescription">Description goes here</p>
+                    <p class="featureProjectSubTitle">Technologies used:</p>
+                    <p class="featureProjectDescription">HTML, CSS, Javascript</p>
+                </div>
+                <div class="gitProjectLinkContainer"><a class="menu-item" href="https://github.com/Jason-Smith-Code/" target="_blank">github</a></div>
+            </div>    
+
+            <div class="carousel-cell" id="slideOne">
+                <div>
+                    <div class="projectImage">
+                        <img src="images/portfolio-images/website.jpg" class="portfolioImage">
+                    </div>
+                    <p class="featureProjectTitle">Portfolio Website</p>
+                    <p class="featureProjectSubTitle">Project objective:</p>
+                    <p class="featureProjectDescription">Description goes here</p>
+                    <p class="featureProjectSubTitle">Technologies used:</p>
+                    <p class="featureProjectDescription">HTML, CSS, Javascript</p>
+                </div>
+                <div class="gitProjectLinkContainer"><a class="menu-item" href="https://github.com/Jason-Smith-Code/" target="_blank">github</a></div>
+            </div> 
+
+            <div class="carousel-cell" id="slideOne">
+                <div>
+                    <div class="projectImage">
+                        <img src="images/portfolio-images/website.jpg" class="portfolioImage">
+                    </div>
+                    <p class="featureProjectTitle">Portfolio Website</p>
+                    <p class="featureProjectSubTitle">Project objective:</p>
+                    <p class="featureProjectDescription">Provide a well presented, easy to navigate, optimised single page site which contains direct links to my portfolio projects in Github.</p>
+                    <p class="featureProjectSubTitle">Technologies used:</p>
+                    <p class="featureProjectDescription">HTML, CSS, Javascript</p>
+                </div>
+                <div class="gitProjectLinkContainer"><a class="menu-item" href="https://github.com/Jason-Smith-Code/" target="_blank">github</a></div>
+            </div>    
+
+            <div class="carousel-cell" id="slideOne">
+                <div>
+                    <div class="projectImage">
+                        <img src="images/portfolio-images/website.jpg" class="portfolioImage">
+                    </div>
+                    <p class="featureProjectTitle">Portfolio Website</p>
+                    <p class="featureProjectSubTitle">Project objective:</p>
+                    <p class="featureProjectDescription">Description goes here</p>
+                    <p class="featureProjectSubTitle">Technologies used:</p>
+                    <p class="featureProjectDescription">HTML, CSS, Javascript</p>
+                </div>
+                <div class="gitProjectLinkContainer"><a class="menu-item" href="https://github.com/Jason-Smith-Code/" target="_blank">github</a></div>
+            </div>    
+
+            <div class="carousel-cell" id="slideOne">
+                <div>
+                    <div class="projectImage">
+                        <img src="images/portfolio-images/website.jpg" class="portfolioImage">
+                    </div>
+                    <p class="featureProjectTitle">Portfolio Website</p>
+                    <p class="featureProjectSubTitle">Project objective:</p>
+                    <p class="featureProjectDescription">Description goes here</p>
+                    <p class="featureProjectSubTitle">Technologies used:</p>
+                    <p class="featureProjectDescription">HTML, CSS, Javascript</p>
+                </div>
+                <div class="gitProjectLinkContainer"><a class="menu-item" href="https://github.com/Jason-Smith-Code/" target="_blank">github</a></div>
+            </div> 
+
+        </div>
+    </section>
+
+    <footer>
+        <section>
+            <div id="footer-section">
+                <div class="footer-block">
+                    <a href="file:///c%3A/Users/CAS/OneDrive/ITSwitch%20Course/portfolio%20site/index.html"><img id="footerlogo" src="images/tekoJSlight.png" alt="logo"></a>
+                </div>
+                <div class="footer-block">
+                    <h6 class="footer-heading">Download</h6>
+                    <ul>
+                        <li class="footer-item-container"> <a href="cv.pdf" class="menu-item">C.V</a></li>
+                    </ul>
+                </div>
+                <div class="footer-block">
+                    <h6 class="footer-heading">Navigation</h6>
+                    <ul>
+                        <li class="footer-item-container"> <a class="menu-item" href="#intro">Intro</a></li>
+                        <li class="footer-item-container"> <a class="menu-item" href="#me">Me</a></li>
+                        <li class="footer-item-container"> <a class="menu-item" href="#stats">Stats</a></li>
+                        <li class="footer-item-container"> <a class="menu-item" href="#about">About</a></li>
+                        <li class="footer-item-container"> <a class="menu-item" href="#journey">Journey</a></li>
+                        <li class="footer-item-container"> <a class="menu-item" href="#experience">Experience</a></li>
+                        <li class="footer-item-container"> <a class="menu-item" href="#portfolio">Portfolio</a></li>
+                    </ul>
+                </div>
+                <div class="footer-block">
+                    <h6 class="footer-heading">Links</h6>
+                    <ul>
+                        <li class="footer-item-container"> <a class="menu-item" href="https://www.linkedin.com/in/jason-smith-193674187/" target="_blank">Linkedin</a></li>
+                        <li class="footer-item-container"> <a class="menu-item" href="https://github.com/Jason-Smith-Code/" target="_blank">github</a></li>
+                    </ul>
+                </div>
+
+                
+            </div>
+        </section>
+        <section>
+            <div class="footer-section" id="socialIcons">
+                <ul>
+                    <li class="inlineBlock"><a class="fa fa-linkedin" href="https://www.linkedin.com/in/jason-smith-193674187/" target="_blank"></a></li>
+                    <li class="inlineBlock"><a class="fa fa-github" href="https://github.com/Jason-Smith-Code/" target="_blank"></a></li>
+                </ul>
+            </div>
+        </section>
+
+    </footer>
+    <script src="Javascript/main.js"></script>
+</body>
+
+</html>
