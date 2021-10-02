@@ -70,9 +70,6 @@
             </div> 
     </section>  
 
-
-
-
     <section class="fullscreen">
         <a id="stats"></a>
                 <div class="centerContainer center hidden">
@@ -93,6 +90,7 @@
                     </h2>
                 </div>
     </section>
+
     <section class="fullscreen">
         <a id="about"></a>
             <div class="centerContainer hidden">
@@ -108,9 +106,9 @@
                     It wasn't nessecary for me to learn this, I just felt like it would have been beneficial to know it.
                 </p>
                     <div class="hobbiesPersonality">
-                        <div>
+                        <div id="hobbies">
                             <h4 class="headline">Hobbies</h4>
-                            <p class="textBlock">
+                            <p>
                                 Gaming<br>
                                 Real Time Strategy<br>
                                 Spending Time with my family<br>
@@ -121,7 +119,7 @@
                         </div>
                         <div>
                             <h4 class="headline">Personality</h4>
-                            <p class="textBlock">
+                            <p>
                                 Honest<br>
                                 easy-going<br>
                                 polite<br>
@@ -133,7 +131,6 @@
             </div>
     </section>
         
-
     <section class="fullscreen">
         <a id="journey"></a>
         <div class="centerContainer hidden">
@@ -176,7 +173,6 @@
             </p>
         </div>
     </section>    
-
 
     <section>
         <a id="portfolio"></a>    
@@ -342,8 +338,6 @@
                         <li class="footer-item-container"> <a class="menu-item" href="https://github.com/Jason-Smith-Code/" target="_blank">github</a></li>
                     </ul>
                 </div>
-
-                
             </div>
         </section>
         <section>
@@ -357,6 +351,16 @@
 
     </footer>
     <script src="Javascript/main.js"></script>
+    <script>
+        var theMobileMenu = document.querySelector('.mobileMenu');
+        function openNav() {
+            theMobileMenu.style.transform = "translateX(0px)";
+        }
+
+        function closeNav() {
+            theMobileMenu.style.transform = "translateX(300px)";
+        }
+    </script>
 </body>
 
 </html>

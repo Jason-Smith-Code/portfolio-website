@@ -17,20 +17,10 @@ prevNextButtons: false,
 pageDots: false,
 });
 
-// element argument can be a selector string
-//   for an individual element
 var flkty = new Flickity( '.carousel', {
 // options
 });
 
-var theMobileMenu = document.querySelector('.mobileMenu');
-function openNav() {
-    theMobileMenu.style.transform = "translateX(0px)";
-}
-
-function closeNav() {
-    theMobileMenu.style.transform = "translateX(300px)";
-}
 
 (function() {
 var elements;

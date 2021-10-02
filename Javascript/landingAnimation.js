@@ -120,7 +120,6 @@ if(divPosition.right <= 0 ){
 
 function fadeOutText(){
     $(".animated-logo").fadeOut("slow");
-    $(".animated-logo2").fadeOut("slow");
 }
 
 $(document).ready(function() {
