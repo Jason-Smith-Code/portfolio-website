@@ -28,7 +28,7 @@ function animateText() {
         "z", "Z", "@"
     ];
 
-        var cycles = 30;
+        var cycles = 25;
         var interval = 100;
         const leftBracket = document.querySelector("#left-bracket");
         const rightBracket = document.querySelector("#right-bracket");
@@ -137,8 +137,8 @@ $(document).ready(function() {
     function moveLocation() {
         window.location.replace("main.html");
     }
-    setTimeout(timeOutOne, 4000);
-    setTimeout(timeOutFour, 5000);
-    setTimeout(moveLocation, 6000);
+    setTimeout(timeOutOne, 3000);
+    setTimeout(timeOutFour, 4000);
+    setTimeout(moveLocation, 5000);
 
 });
