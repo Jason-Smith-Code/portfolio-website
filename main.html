@@ -19,41 +19,49 @@
         <a href="index.html"><img id="logo" src="images/tekoJSlight.png" alt="logo"></a>
         <nav id="desktopMenu">
             <ul id="menu">
-                <li class="menu-item-container"> <a class="menu-item" href="#intro">Intro</a></li>
-                <li class="menu-item-container"> <a class="menu-item" href="#me">Me</a></li>
-                <li class="menu-item-container"> <a class="menu-item" href="#stats">Stats</a></li>
-                <li class="menu-item-container"> <a class="menu-item" href="#about">About</a></li>
-                <li class="menu-item-container"> <a class="menu-item" href="#journey">Journey</a></li>
-                <li class="menu-item-container"> <a class="menu-item" href="#experience">Experience</a></li>
-                <li class="menu-item-container"> <a class="menu-item" href="#portfolio">Portfolio</a></li>
-                <li class="menu-item-container"> <a href="cv.pdf" class="menu-item">C.V</a></li>
+                <li class="menu-item-container"><span class="leftBracket">[</span> <a class="menu-item" href="#intro">Intro</a><span class="rightBracket">]</span></li>
+                <li class="menu-item-container"><span class="leftBracket">[</span> <a class="menu-item" href="#me">Me</a><span class="rightBracket">]</span></li>
+                <li class="menu-item-container"><span class="leftBracket">[</span> <a class="menu-item" href="#stats">Stats</a><span class="rightBracket">]</span></li>
+                <li class="menu-item-container"><span class="leftBracket">[</span> <a class="menu-item" href="#about">About</a><span class="rightBracket">]</span></li>
+                <li class="menu-item-container"><span class="leftBracket">[</span> <a class="menu-item" href="#journey">Journey</a><span class="rightBracket">]</span></li>
+                <li class="menu-item-container"><span class="leftBracket">[</span> <a class="menu-item" href="#experience">Experience</a><span class="rightBracket">]</span></li>
+                <li class="menu-item-container"><span class="leftBracket">[</span> <a class="menu-item" href="#portfolio">Portfolio</a><span class="rightBracket">]</span></li>
+                <li class="menu-item-container"><span class="leftBracket">[</span> <a href="download/cv.pdf" target="_blank" class="menu-item" download="cv.pdf">C.V</a><span class="rightBracket">]</span></li>
             </ul>
+
+            <div id="openMenuButton" class="menu-item-container" onclick="openNav()">
+                <span class="leftBracket">[</span>
+                <a class="menu-item">OPEN MENU</a>
+                <span class="rightBracket">]</span>
+            </div>
+
         </nav>
-        <div class="openMenuButton" onclick="openNav()"><a>[Open Menu]</a></div>
+        
+            
         <nav class="mobileMenu">
-            <ul>
-                <div class="closeMenuButton" onclick="closeNav()"><a class="darkText">[Close Menu]</a></div>
-                <li class="menu-item-container"> <a class="menu-item darkText" href="#intro">Intro</a></li>
-                <li class="menu-item-container"> <a class="menu-item darkText" href="#me">Me</a></li>
-                <li class="menu-item-container"> <a class="menu-item darkText" href="#stats">Stats</a></li>
-                <li class="menu-item-container"> <a class="menu-item darkText" href="#about">About</a></li>
-                <li class="menu-item-container"> <a class="menu-item darkText" href="#journey">Journey</a></li>
-                <li class="menu-item-container"> <a class="menu-item darkText" href="#experience">Experience</a></li>
-                <li class="menu-item-container"> <a class="menu-item darkText" href="#portfolio">Portfolio</a></li>
-                <li class="menu-item-container"> <a href="cv.pdf" class="menu-item">C.V</a></li>
+            <ul id="verticalMenu">
+                <div class="closeMenuButton" onclick="closeNav()"><a class="darkText">[CLOSE MENU]</a></div>
+                <li class="menu-item-container verticalLinkPadding"><span class="leftBracket darkText">[</span> <a class="menu-item darkText" href="#intro">Intro</a><span class="darkText rightBracket">]</span></li>
+                <li class="menu-item-container verticalLinkPadding"><span class="leftBracket darkText">[</span> <a class="menu-item darkText" href="#me">Me</a><span class="rightBracket darkText">]</span></li>
+                <li class="menu-item-container verticalLinkPadding"><span class="leftBracket darkText">[</span> <a class="menu-item darkText" href="#stats">Stats</a><span class="rightBracket darkText">]</span></li>
+                <li class="menu-item-container verticalLinkPadding"><span class="leftBracket darkText">[</span> <a class="menu-item darkText" href="#about">About</a><span class="rightBracket darkText">]</span></li>
+                <li class="menu-item-container verticalLinkPadding"><span class="leftBracket darkText">[</span> <a class="menu-item darkText" href="#journey">Journey</a><span class="rightBracket darkText">]</span></li>
+                <li class="menu-item-container verticalLinkPadding"><span class="leftBracket darkText">[</span> <a class="menu-item darkText" href="#experience">Experience</a><span class="rightBracket darkText">]</span></li>
+                <li class="menu-item-container verticalLinkPadding"><span class="leftBracket darkText">[</span> <a class="menu-item darkText" href="#portfolio">Portfolio</a><span class="rightBracket darkText">]</span></li>
+                <li class="menu-item-container verticalLinkPadding"><span class="leftBracket darkText">[</span> <a class="menu-item darkText" href="download/cv.pdf" target="_blank" download="cv.pdf">C.V</a><span class="rightBracket darkText">]</span></li>
             </ul>
         </nav>
     </header>
-    <section class="fullscreen">
+    <section>
         <a id="intro"></a>
         <div class="centerContainer hidden">
-            <!-- <img id="me" src="images/mono-me-transbackgroundHalf.png"> -->
+            <!-- improve this section by animating me face in when it comes into view -->
             <div>
                 <p class="preHeading">My name is</p>
                 <h1 class="headline mainHeading">Jason Smith</h1>
                 <h2 class="headline">I'm a full stack developer<br>
                 </h2>
-                <p class="maxWidthText">
+                <p class="textBlock">
                     I'm <span id="myAge"></span> 
                     years old and I'm a super keen coder hoping to expand on my knowedge in various programming languages so that I can use them in a professional capacity.
                 </p>
@@ -61,62 +69,81 @@
         </div>
     </section>
 
-    <section class="fullscreen">
+    <section>
         <a id="me"></a>
         <div class="centerContainer center hidden">
-            <div class="portrait">
-                <img id="me" src="images/mono-me.jpg">
+            <div id="portraitContainer">
+                <img class="portraitLayer" src="images/portrait/1.png">
+                <img class="portraitLayer" src="images/portrait/2.png">
+                <img class="portraitLayer" src="images/portrait/3.png">
+                <img class="portraitLayer" src="images/portrait/4.png">
+                <img class="portraitLayer" src="images/portrait/5.png">
+                <img class="portraitLayer" src="images/portrait/6.png">
+                <img class="portraitLayer" src="images/portrait/7.png">
+                <img class="portraitLayer" src="images/portrait/8.png">
+                <img class="portraitLayer" src="images/portrait/9.png">
+                <img class="portraitLayer" src="images/portrait/10.png">
+                <img class="portraitLayer" src="images/portrait/11.png">
+                <img class="portraitLayer" src="images/portrait/12.png">
+                <img class="portraitLayer" src="images/portrait/13.png">
+                <img class="portraitLayer" src="images/portrait/14.png">
+                <img class="portraitLayer" src="images/portrait/15.png">
+                <img class="portraitLayer" src="images/portrait/16.png">
+                <img class="portraitLayer" src="images/portrait/17.png">
+                <img class="portraitLayer" src="images/portrait/18.png">
+                <img class="portraitLayer" src="images/portrait/19.png">
+                <img class="portraitLayer" src="images/portrait/20.png">
             </div>    
-            </div> 
+        </div> 
     </section>  
 
-    <section class="fullscreen">
+    <section>
         <a id="stats"></a>
-                <div class="centerContainer center hidden">
-                    <h2 class="headline">My Stats</h2>
-                    <h2 class="stats">
-                        <span class="statsDescription">HTML:</span>[||||||||||||||||||<span class="backgroundColour">||</span>]<br>
-                        <span class="statsDescription">CSS:</span>[|||||||||||||||||<span class="backgroundColour">|||</span>]<br>
-                        <span class="statsDescription">Javascript:</span>[|||||||||||||<span class="backgroundColour">|||||||</span>]<br>
-                        <span class="statsDescription">Jquery:</span>[|||||||||||||<span class="backgroundColour">|||||||</span>]<br>
-                        <span class="statsDescription">Electron:</span>[|||||||||||||<span class="backgroundColour">|||||||</span>]<br>
-                        <span class="statsDescription">Node:</span>[|||||||||||||<span class="backgroundColour">|||||||</span>]<br>
-                        <span class="statsDescription">Angular:</span>[|||||||||||||<span class="backgroundColour">|||||||</span>]<br>
-                        <span class="statsDescription">React:</span>[|||||||||||||<span class="backgroundColour">|||||||</span>]<br>
-                        <span class="statsDescription">PHP:</span>[|||<span class="backgroundColour">|||||||||||||||||</span>]<br>
-                        <span class="statsDescription">Python:</span>[|||||||||||||<span class="backgroundColour">|||||||</span>]<br>
-                        <span class="statsDescription">SQL:</span>[||||<span class="backgroundColour">||||||||||||||||</span>]<br>
-                        <span class="statsDescription">GIT:</span>[||||||<span class="backgroundColour">||||||||||||||</span>]<br>
-                    </h2>
-                </div>
+        <div class="centerContainer center hidden">
+            <h2 class="headline">My Stats</h2>
+            <h2 class="stats">
+                <span class="statsDescription">HTML:</span>[||||||||||||||||||<span class="backgroundColour">||</span>]<br>
+                <span class="statsDescription">CSS:</span>[|||||||||||||||||<span class="backgroundColour">|||</span>]<br>
+                <span class="statsDescription">Javascript:</span>[|||||||||||||<span class="backgroundColour">|||||||</span>]<br>
+                <span class="statsDescription">Jquery:</span>[|||||||||||||<span class="backgroundColour">|||||||</span>]<br>
+                <span class="statsDescription">Electron:</span>[|||||||||||||<span class="backgroundColour">|||||||</span>]<br>
+                <span class="statsDescription">Node:</span>[|||||||||||||<span class="backgroundColour">|||||||</span>]<br>
+                <span class="statsDescription">Angular:</span>[|||||||||||||<span class="backgroundColour">|||||||</span>]<br>
+                <span class="statsDescription">React:</span>[|||||||||||||<span class="backgroundColour">|||||||</span>]<br>
+                <span class="statsDescription">Vue:</span>[|||<span class="backgroundColour">|||||||||||||||||</span>]<br>
+                <span class="statsDescription">PHP:</span>[|||<span class="backgroundColour">|||||||||||||||||</span>]<br>
+                <span class="statsDescription">Python:</span>[|||||||||||||<span class="backgroundColour">|||||||</span>]<br>
+                <span class="statsDescription">SQL:</span>[||||<span class="backgroundColour">||||||||||||||||</span>]<br>
+                <span class="statsDescription">GIT:</span>[||||||<span class="backgroundColour">||||||||||||||</span>]<br>
+            </h2>
+        </div>
     </section>
 
-    <section class="fullscreen">
+    <section>
         <a id="about"></a>
             <div class="centerContainer hidden">
                 <h2 class="headline">Hi guys</h2>
                 <p class="textBlock">
                     So what got me into coding you ask?
                     <br><br>
-                    Short answer, gaming.<br>
+                    Short answer, my business & gaming.
+                    <br><br>
                     I'm a huge fan of real time strategies games, action RPG's and occasionally I play first person shooter's (very badly).
                     Curiosity took over in my early 30's, which made me want to know more about how games were made, I also took that same curious aproach to certain aspects of my business.
-                    Whilst there are plenty of platforms available to make building and maintaining a website as codeless and effortless as possible,
-                    I still wanted to get more involved in the process and to gain some knowledge. I learnt about HTML, CSS, Javascript and some PHP.
-                    It wasn't nessecary for me to learn this, I just felt like it would have been beneficial to know it.
+                    This pointed me in the direction of web design, and to coding languages like javascript and php. Over some time I attempted to learn, got my approach wrong and also wasn't consistent 
                 </p>
                     <div class="hobbiesPersonality">
-                        <div id="hobbies">
+                        <div class="mobile-space">
                             <h4 class="headline">Hobbies</h4>
                             <p>
+                                Spending time with family<br>
                                 Gaming<br>
                                 Real Time Strategy<br>
-                                Spending Time with my family<br>
                                 Learning<br>
-                                Art<br>
-            
+                                Painting / Drawing<br>
                             </p>
                         </div>
+
                         <div>
                             <h4 class="headline">Personality</h4>
                             <p>
@@ -124,24 +151,20 @@
                                 easy-going<br>
                                 polite<br>
                                 Optimist<br>
-                                Introverted
+                                Determined<br>
                             </p>
                         </div>
                     </div>
             </div>
     </section>
         
-    <section class="fullscreen">
+    <section>
         <a id="journey"></a>
-        <div class="centerContainer hidden">
+        <div class="centerContainer hidden mobile-space">
             <h2 class="headline">So what have I been up to</h2>
             <p class="textBlock">
-                Planning my transition to becoming a
-                For the past 10 years I've been self employed, running both a physical & online artist materials shop. It's my current occupation, and
-                I had been feeling some pretty deep regret regarding a decision I made when I left school. The decision being the courses that I decided to take (Graphic design & Fine art).
-                Since I really wasn't sure what I wanted to do, I decided to persue a path in a subject that I excelled in, which turned out to be a bad decision.
-                I've planned ahead to run this business with minimal effort leaving
-                about 6 hours a day to study at work. So why on earth would I want to quit my business?
+                For the past 10 years I've been self employed, running both a physical & online artist materials store.
+                I spent some time planning my transition to change my occupation, following a set of goals, learning and absorbing as much as I can whilst balancing work and home life.    
             </p>
         </div>
         <div class="centerContainer hidden">
@@ -162,7 +185,7 @@
         </div>
     </section>
 
-    <section class="fullscreen">
+    <section>
         <a id="experience"></a>
         <div class="centerContainer hidden">
             <h2 class="headline">Experience</h2>
@@ -174,7 +197,7 @@
         </div>
     </section>    
 
-    <section>
+    <section id="featured">
         <a id="portfolio"></a>    
         <div class="carousel">
 
@@ -189,10 +212,13 @@
                     <p class="featureProjectSubTitle">Technologies used:</p>
                     <p class="featureProjectDescription">HTML, CSS, Javascript</p>
                 </div>
-                <div class="gitProjectLinkContainer"><a class="menu-item" href="https://github.com/Jason-Smith-Code/" target="_blank">github</a></div>
+                <ul id="verticalMenu">
+                    <li class="gitProjectLinkContainer menu-item-container verticalLinkPadding"><span class="leftBracket">[</span><a class="menu-item" href="https://github.com/Jason-Smith-Code/portfolio-website" target="_blank">github</a><span class="rightBracket">]</span></li>
+                </ul>
+               
             </div>    
 
-            <div class="carousel-cell" id="slideOne">
+            <div class="carousel-cell" id="">
                 <div>
                     <div class="projectImage">
                         <img src="images/portfolio-images/website.jpg" class="portfolioImage">
@@ -206,7 +232,7 @@
                 <div class="gitProjectLinkContainer"><a class="menu-item" href="https://github.com/Jason-Smith-Code/" target="_blank">github</a></div>
             </div>    
 
-            <div class="carousel-cell" id="slideOne">
+            <div class="carousel-cell" id="">
                 <div>
                     <div class="projectImage">
                         <img src="images/portfolio-images/website.jpg" class="portfolioImage">
@@ -220,7 +246,7 @@
                 <div class="gitProjectLinkContainer"><a class="menu-item" href="https://github.com/Jason-Smith-Code/" target="_blank">github</a></div>
             </div>    
 
-            <div class="carousel-cell" id="slideOne">
+            <div class="carousel-cell" id="">
                 <div>
                     <div class="projectImage">
                         <img src="images/portfolio-images/website.jpg" class="portfolioImage">
@@ -234,7 +260,7 @@
                 <div class="gitProjectLinkContainer"><a class="menu-item" href="https://github.com/Jason-Smith-Code/" target="_blank">github</a></div>
             </div>    
 
-            <div class="carousel-cell" id="slideOne">
+            <div class="carousel-cell" id="">
                 <div>
                     <div class="projectImage">
                         <img src="images/portfolio-images/website.jpg" class="portfolioImage">
@@ -248,7 +274,7 @@
                 <div class="gitProjectLinkContainer"><a class="menu-item" href="https://github.com/Jason-Smith-Code/" target="_blank">github</a></div>
             </div>    
 
-            <div class="carousel-cell" id="slideOne">
+            <div class="carousel-cell" id="">
                 <div>
                     <div class="projectImage">
                         <img src="images/portfolio-images/website.jpg" class="portfolioImage">
@@ -262,7 +288,7 @@
                 <div class="gitProjectLinkContainer"><a class="menu-item" href="https://github.com/Jason-Smith-Code/" target="_blank">github</a></div>
             </div> 
 
-            <div class="carousel-cell" id="slideOne">
+            <div class="carousel-cell" id="">
                 <div>
                     <div class="projectImage">
                         <img src="images/portfolio-images/website.jpg" class="portfolioImage">
@@ -276,7 +302,7 @@
                 <div class="gitProjectLinkContainer"><a class="menu-item" href="https://github.com/Jason-Smith-Code/" target="_blank">github</a></div>
             </div>    
 
-            <div class="carousel-cell" id="slideOne">
+            <div class="carousel-cell" id="">
                 <div>
                     <div class="projectImage">
                         <img src="images/portfolio-images/website.jpg" class="portfolioImage">
@@ -290,7 +316,7 @@
                 <div class="gitProjectLinkContainer"><a class="menu-item" href="https://github.com/Jason-Smith-Code/" target="_blank">github</a></div>
             </div>    
 
-            <div class="carousel-cell" id="slideOne">
+            <div class="carousel-cell" id="">
                 <div>
                     <div class="projectImage">
                         <img src="images/portfolio-images/website.jpg" class="portfolioImage">
@@ -308,48 +334,45 @@
     </section>
 
     <footer>
-        <section>
             <div id="footer-section">
                 <div class="footer-block">
                     <a href="file:///c%3A/Users/CAS/OneDrive/ITSwitch%20Course/portfolio%20site/index.html"><img id="footerlogo" src="images/tekoJSlight.png" alt="logo"></a>
                 </div>
                 <div class="footer-block">
                     <h6 class="footer-heading">Download</h6>
-                    <ul>
-                        <li class="footer-item-container"> <a href="cv.pdf" class="menu-item">C.V</a></li>
+                    <ul id="verticalMenu">
+                        <li class="menu-item-container verticalLinkPadding"><span class="leftBracket">[</span> <a href="cv.pdf" class="menu-item">C.V</a><span class="rightBracket">]</span></li>
                     </ul>
                 </div>
                 <div class="footer-block">
                     <h6 class="footer-heading">Navigation</h6>
-                    <ul>
-                        <li class="footer-item-container"> <a class="menu-item" href="#intro">Intro</a></li>
-                        <li class="footer-item-container"> <a class="menu-item" href="#me">Me</a></li>
-                        <li class="footer-item-container"> <a class="menu-item" href="#stats">Stats</a></li>
-                        <li class="footer-item-container"> <a class="menu-item" href="#about">About</a></li>
-                        <li class="footer-item-container"> <a class="menu-item" href="#journey">Journey</a></li>
-                        <li class="footer-item-container"> <a class="menu-item" href="#experience">Experience</a></li>
-                        <li class="footer-item-container"> <a class="menu-item" href="#portfolio">Portfolio</a></li>
+                    <ul id="verticalMenu">
+                        <li class="menu-item-container verticalLinkPadding"><span class="leftBracket">[</span> <a class="menu-item" href="#intro">Intro</a><span class="rightBracket">]</span></li>
+                        <li class="menu-item-container verticalLinkPadding"><span class="leftBracket">[</span> <a class="menu-item" href="#me">Me</a><span class="rightBracket">]</span></li>
+                        <li class="menu-item-container verticalLinkPadding"><span class="leftBracket">[</span> <a class="menu-item" href="#stats">Stats</a><span class="rightBracket">]</span></li>
+                        <li class="menu-item-container verticalLinkPadding"><span class="leftBracket">[</span> <a class="menu-item" href="#about">About</a><span class="rightBracket">]</span></li>
+                        <li class="menu-item-container verticalLinkPadding"><span class="leftBracket">[</span> <a class="menu-item" href="#journey">Journey</a><span class="rightBracket">]</span></li>
+                        <li class="menu-item-container verticalLinkPadding"><span class="leftBracket">[</span> <a class="menu-item" href="#experience">Experience</a><span class="rightBracket">]</span></li>
+                        <li class="menu-item-container verticalLinkPadding"><span class="leftBracket">[</span> <a class="menu-item" href="#portfolio">Portfolio</a><span class="rightBracket">]</span></li>
+                        <li class="menu-item-container verticalLinkPadding"><span class="leftBracket">[</span> <a href="download/cv.pdf" target="_blank" class="menu-item" download="cv.pdf">C.V</a><span class="rightBracket">]</span></li>
                     </ul>
                 </div>
                 <div class="footer-block">
                     <h6 class="footer-heading">Links</h6>
-                    <ul>
-                        <li class="footer-item-container"> <a class="menu-item" href="https://www.linkedin.com/in/jason-smith-193674187/" target="_blank">Linkedin</a></li>
-                        <li class="footer-item-container"> <a class="menu-item" href="https://github.com/Jason-Smith-Code/" target="_blank">github</a></li>
+                    <ul id="verticalMenu">
+                        <li class="menu-item-container verticalLinkPadding"><span class="leftBracket">[</span> <a class="menu-item" href="https://www.linkedin.com/in/jason-smith-193674187/" target="_blank">Linkedin</a><span class="rightBracket">]</span></li>
+                        <li class="menu-item-container verticalLinkPadding"><span class="leftBracket">[</span> <a class="menu-item" href="https://github.com/Jason-Smith-Code/" target="_blank">github</a><span class="rightBracket">]</span></li>
                     </ul>
                 </div>
             </div>
-        </section>
-        <section>
             <div class="footer-section" id="socialIcons">
                 <ul>
                     <li class="inlineBlock"><a class="fa fa-linkedin" href="https://www.linkedin.com/in/jason-smith-193674187/" target="_blank"></a></li>
                     <li class="inlineBlock"><a class="fa fa-github" href="https://github.com/Jason-Smith-Code/" target="_blank"></a></li>
                 </ul>
             </div>
-        </section>
-
     </footer>
+
     <script src="Javascript/main.js"></script>
     <script>
         var theMobileMenu = document.querySelector('.mobileMenu');

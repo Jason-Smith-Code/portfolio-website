@@ -49,7 +49,6 @@ function animateText() {
                 leftBracket.innerHTML = "[";
                 }
             }
-            
         }, i * interval)  
     }
 
@@ -63,7 +62,6 @@ function animateText() {
                     letterJ.innerHTML = "J";
                 }
             }
-            
         }, i * interval)  
     }
 
@@ -77,7 +75,6 @@ function animateText() {
                     letterS.innerHTML = "S";
                 }
             }
-            
         }, i * interval)  
     }
 
@@ -103,7 +100,7 @@ function removeBrackets() {
     },1000);
     }else{
     $("#leftBracketContainer").animate({
-    "left": -1500
+    "left": '-100vw'
     },1000);   
 };
 
@@ -113,7 +110,7 @@ if(divPosition.right <= 0 ){
     },1000);
     }else{
     $("#rightBracketContainer").animate({
-    "right": -1500
+    "right": '-100vw'
     },1000);   
     };
 }
@@ -125,19 +122,19 @@ function fadeOutText(){
 $(document).ready(function() {
     animateText();
 
-    function timeOutOne() {  
+    function timeOut1() {  
         removeBrackets();
     }
 
-    function timeOutFour() {  
+    function timeOut2() {  
         fadeOutText();
     }
 
     function moveLocation() {
         window.location.replace("main.html");
     }
-    setTimeout(timeOutOne, 3000);
-    setTimeout(timeOutFour, 4000);
-    setTimeout(moveLocation, 5000);
+    setTimeout(timeOut1, 3000);
+    setTimeout(timeOut2, 3500);
+    setTimeout(moveLocation, 4500);
 
 });

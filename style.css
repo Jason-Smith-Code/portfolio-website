@@ -1,8 +1,3 @@
-/* colour list
-#ee421a orange
-#c92600 dark orange
-*/
-
 :root {
     --SuperDarkGrey: #101010;
     --lightCyan: #01fff6;
@@ -14,6 +9,41 @@
     --text:#FF7B24;
 }
 
+@font-face {
+    font-family: 'tekolight';
+    src: url('fonts/teko-light-webfont.woff2') format('woff2'),
+         url('fonts/teko-light-webfont.woff') format('woff');
+    font-weight: 100;
+    font-style: none;
+}
+
+* {
+    box-sizing: border-box;
+    margin:0;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--SuperDarkGrey);
+    margin: 0;
+    font-size: 1.2em;
+}
+
+header {
+    background-color: var(--SuperDarkGrey);
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
 
 @keyframes fade-in {
     0% {
@@ -57,46 +87,15 @@
     margin-left:100px;
 }
 
-body {
-    background-color: var(--SuperDarkGrey);
-    margin: 0;
-    font-size: 1.2em;
-}
-
-header {
-    background-color: var(--SuperDarkGrey);
-    position: fixed;
-    z-index: 2;
-    top: 0;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-* {
-    box-sizing: border-box;
-    margin:0;
-}
-
-html {
-    margin: 0;
-    padding: 0;
-    scroll-behavior: smooth;
+.textBlock {
+    text-align: justify;
+    margin: auto;
 }
 
 /* FONTS */
 
-@font-face {
-    font-family: 'tekolight';
-    src: url('fonts/teko-light-webfont.woff2') format('woff2'),
-         url('fonts/teko-light-webfont.woff') format('woff');
-    font-weight: 100;
-    font-style: none;
-}
-
 h1, h2, h3, h4, h5, h6, a {
-    font-family: 'tekolight';
+    font-family: 'tekolight', Arial, Helvetica, sans-serif;
     font-weight: 100;
 }
 
@@ -114,7 +113,7 @@ h1, h2, h3, h4, h5, h6 {
 
 p.preHeading {
     font-size: 2em;
-    font-family: 'tekolight';
+    font-family: 'tekolight', Arial, Helvetica, sans-serif;
     letter-spacing: 3px;
 }
 
@@ -126,11 +125,6 @@ q, p, #myAge {
     font-family: Arial, Helvetica, sans-serif;
     color: var(--text);
     line-height: 1.5;
-}
-
-.textBlock {
-    text-align: justify;
-    margin: auto;
 }
 
 a {
@@ -152,18 +146,13 @@ a.textLink {
 }
 
 .darkText {
-    color: var(--SuperDarkGrey);
+    color: var(--SuperDarkGrey) !important;
 }
 
 /* LISTS & NAV */
 
-.openMenuButton {
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding-top: 10px;
-    padding-right: 20px;
-    display:none
+#openMenuButton {
+   display:none;
 }
 
 .closeMenuButton {
@@ -176,14 +165,14 @@ a.textLink {
 }
 
 .mobileMenu {
-    padding-top:100px;
-    transition:ease-in-out 500ms;
+    padding-top: 100px;
+    transition: ease-in-out 500ms;
     position: fixed;
-    transform:translateX(300px);
-    top:0;
-    right:0;
+    transform: translateX(300px);
+    top: 0;
+    bottom: 0;
+    right: 0;
     width: 220px;
-    min-height: 100vh;
     background-color: var(--text);
     box-shadow: 0px 0px 20px 5px #101010;
 }
@@ -194,48 +183,71 @@ ul {
     padding: 0;
 }
 
+.menu-item-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.rightBracket, .leftBracket {
+    line-height: 1.5;
+    color: var(--text);
+    transition: 1s;
+    cursor: pointer;
+    text-decoration: none;
+    font-family: 'tekolight';
+    font-size: 1.5em;
+    position: absolute;
+    transition: linear 200ms;
+}
+
+.leftBracket {
+    left: 0;
+}
+
+.rightBracket {
+    right: 0;
+}
+
 #menu {
     display: flex;
     flex-direction: row;
+    align-items: center;
+}
+
+ul#verticalMenu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .menu-item {
-    padding: 0px;
-    min-width: 50px;
+    padding-left: 30px;
+    padding-right: 30px;
     letter-spacing: 3px;
     font-size: 1.5em;
+    text-transform: uppercase;
 }
 
-.menu-item:hover::before, .menu-item:hover::after {
-    margin-right:0px;
-    margin-left:0px;
+.menu-item-container:hover span.leftBracket {
+    left: 15px;
 }
 
-.menu-item::before {
-    content: '[';
-    margin-right:10px;
-    transition: ease-in-out .2s;
+.menu-item-container:hover span.rightBracket {
+    right: 18px;
 }
 
-.menu-item::after {
-    content: ']';
-    margin-left: 10px;
-    transition: ease-in-out .2s;
-}
-
-.menu-item-container{
-    min-width:170px;
-    text-align: center;
+.verticalLinkPadding {
+    padding-top:10px;
+    padding-bottom: 10px;
 }
 
 /* CONTENT */
 
 
 section {
-    width:100%;
-}
-
-.fullscreen {
     width: 100%;
     min-height: 100vh;
     display: flex;
@@ -243,6 +255,12 @@ section {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+section#featured {
+    display: block;
+    min-height: 0;
+    overflow: hidden;
 }
 
 .centerContainer {
@@ -290,45 +308,29 @@ section {
     position:relative;
     overflow: hidden;
 }
-.portraitChunk1,
-.portraitChunk2,
-.portraitChunk3,
-.portraitChunk4,
-.portraitChunk5,
-.portraitChunk6,
-.portraitChunk7,
-.portraitChunk8,
-.portraitChunk9,
-.portraitChunk10,
-.portraitChunk11,
-.portraitChunk12,
-.portraitChunk13,
-.portraitChunk14,
-.portraitChunk15,
-.portraitChunk16,
-.portraitChunk17,
-.portraitChunk18,
-.portraitChunk19,
-.portraitChunk20
+
+#portraitContainer {
+    width: 500px;
+    height: 500px;
+    position: relative;
+}
+
+.portraitLayer
 {
     transition: 2s;
     position: absolute;
     width:100%;
-    transform: translate(500px);
+    transform: translateY(0%);
 }
 
 img#me {
     border-radius: 50%;
     filter: hue-rotate( 
     19deg);
-    height: 500px;
+    max-width: 500px;
 }
 
 /* PORTFOLIO SLIDER */
-
-.flickity-slider {
-    height:800px;
-}
 
 .carousel {
     background-image: linear-gradient(to right, #c94000 , #FF7B24);
@@ -336,7 +338,6 @@ img#me {
     padding-bottom: 200px;
     outline:none;
     overflow: hidden;
-    max-height: 100vh;
   }
   
   .carousel-cell {
@@ -351,7 +352,7 @@ img#me {
     background: var(--SuperDarkGrey);
     counter-increment: gallery-cell;
     align-items: stretch;
-    min-height: 100%;
+    min-height: 900px;
 }
   
 /* FEATURED PORTFOLIO */
@@ -363,7 +364,7 @@ img#me {
 
 .featureProjectTitle {
     color: white;
-    font-family: 'tekolight'; ;
+    font-family: 'tekolight', Arial, Helvetica, sans-serif;
     text-transform: uppercase;
     font-size: 3em;
     margin-bottom: 25px;
@@ -372,7 +373,7 @@ img#me {
 
 .featureProjectSubTitle {
     color: var(--text);
-    font-family: 'tekolight';
+    font-family: 'tekolight', Arial, Helvetica, sans-serif;
     text-transform: uppercase;
     font-size: 1.5em;
     letter-spacing: 3px;
@@ -384,15 +385,7 @@ img#me {
     margin-bottom: 25px;
 }
 
-#featured {
-    padding-top: 100px;
-    background: var(--darkOrange);
-    overflow:hidden;
-}
-
 .gitProjectLinkContainer {
-    width: 100%;
-    text-align: center;
     font-size:2em;
     bottom: 20px;
 }
@@ -403,7 +396,6 @@ img#me {
     width: 200px;
     filter: brightness(285%);
 }
-
 
 .footer-link {
     text-decoration: none;
@@ -434,13 +426,8 @@ footer{
 
 .footer-block {
     width: 25%;
-    min-height: 300px;
     padding: 20px;
     text-align: center;
-}
-
-.footer-item-container {
-    width: 100%;
 }
 
 /* FOOTER SOCIAL BAR */
@@ -484,7 +471,7 @@ border-left: 1px solid black;
 /* ANIMATED LOGO */
 
 #left-bracket, #right-bracket {
-    font-family: 'tekolight';
+    font-family: 'tekolight', Arial, Helvetica, sans-serif;
 }
 
 #animated-logo-container {
@@ -505,7 +492,7 @@ border-left: 1px solid black;
 
 .animated-logo {
     font-size: 200px;
-    font-family: 'tekolight';
+    font-family: 'tekolight', Arial, Helvetica, sans-serif;
     font-weight: light;
     padding: 0;
     margin: 0;
@@ -514,7 +501,7 @@ border-left: 1px solid black;
 
 .animated-logo2 {
     font-size: 150px;
-    font-family: 'tekolight';
+    font-family: 'tekolight', Arial, Helvetica, sans-serif;
     font-weight: light;
     padding: 0;
     margin: 0;
@@ -573,6 +560,34 @@ border-left: 1px solid black;
 
 @media only screen and (min-width: 0px) and (max-width: 480px) {
 
+    .statsDescription {
+        width: 140px;
+    }
+
+    .stats {
+        font-size: 1.2em;
+    }
+
+    .mainHeading {
+        font-size: 4em;
+    }
+
+    section {
+        width: 100%;
+        margin-top: 200px;
+        margin-bottom: 200px;
+        min-height: 0vh;
+        display: flex;
+        /* margin: auto; */
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    img#me {
+        width: 100%;
+    }
+
     header {
         position: absolute;
     }
@@ -623,10 +638,6 @@ border-left: 1px solid black;
         width: 100%;
     }
 
-    .portolioBox {
-        width: 100%;
-    }
-
     .flex-row {
         display: flex;
         flex-direction: column;
@@ -636,21 +647,12 @@ border-left: 1px solid black;
     .statsContainer {
         margin-left: 0px;
     }
-    .maxWidthText {
-        max-width: 800px;
-        text-align: justify;
-        margin: auto;
-    }
 
     img#me {
         margin-bottom: 100px;
     }
     .centerContainer {
         text-align: center;
-    }
-    
-    .portolioBox {
-        border: none;
     }
 
     .hobbiesPersonality {
@@ -667,6 +669,22 @@ border-left: 1px solid black;
 }
 
 @media only screen and (min-width: 481px) and (max-width: 768px) {
+
+    .textBlock {
+        max-width: 600px;
+    }
+
+    .stats {
+        font-size: 1.2em;
+    }
+
+    .mainHeading {
+        font-size: 4em;
+    }
+
+    img#me {
+        width: 100%;
+    }
 
     header {
         position: relative;
@@ -718,10 +736,6 @@ border-left: 1px solid black;
         width: 100%;
     }
 
-    .portolioBox {
-        width: 100%;
-    }
-
     .flex-row {
         display: flex;
         flex-direction: column;
@@ -731,21 +745,13 @@ border-left: 1px solid black;
     .statsContainer {
         margin-left: 0px;
     }
-    .maxWidthText {
-        max-width: 800px;
-        text-align: justify;
-        margin: auto;
-    }
 
     img#me {
         margin-bottom: 100px;
     }
+
     .centerContainer {
         text-align: center;
-    }
-    
-    .portolioBox {
-        border: none;
     }
 
     .hobbiesPersonality {
@@ -755,6 +761,7 @@ border-left: 1px solid black;
         flex-direction: column;
         margin-bottom: 100px;
     }
+
     .mobile-space {
         margin-bottom: 100px;
     }
@@ -762,19 +769,24 @@ border-left: 1px solid black;
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1000px) {
+
     .hobbiesPersonality {
         margin-top: 100px;
         width: 688px;
         text-align: center;
     }
+
+    .textBlock {
+        max-width: 600px;
+    }
 }
 
 @media only screen and (max-width: 1500px) {
-    .openMenuButton {
+    #openMenuButton {
         display:block;
     }
 
-    #desktopMenu  {
+    #menu  {
         display:none;
     }
 }
