@@ -45,7 +45,17 @@ header {
     justify-content: space-between;
 }
 
-@keyframes fade-in {
+section {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    margin:auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes small-fade-right {
     0% {
       opacity: 0;
       -webkit-transform: translate3d(100px, 0, 0);
@@ -57,30 +67,40 @@ header {
         -webkit-transform: translate3d(0, 0, 0);
         transform: translate3d(0, 0, 0);
       }
-
   }
 
   .fade-in-element {
-    animation: fade-in 1s;
+    animation: small-fade-right 1s;
+  }
+  .fade-in-element-slow {
+    animation: large-fade-right 1s;
   }
 
-  .hidden {
+  .hidden{
     opacity: 0;
   }
-
-.backgroundColour {
-    color: var(--transparentLightOrange);
-} 
 
 .statsDescription {
     display: inline-block;
     width: 180px;
     text-align: left;
+    letter-spacing: 3px;
 }
 
-.stats {
-    font-size:2em;
-    line-height: 1.3;
+.statRow {
+    font-family: 'tekolight' !important;
+    display:flex;
+    flex-direction: row;
+    font-size: 2em;
+    color: var(--text);
+}
+
+.dark {
+    opacity: .1;
+}
+
+.css, .html, .javascript {
+    transition: 1s;
 }
 
 .statsContainer {
@@ -246,17 +266,6 @@ ul#verticalMenu {
 
 /* CONTENT */
 
-
-section {
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    margin:auto;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
 section#featured {
     display: block;
     min-height: 0;
@@ -302,34 +311,136 @@ section#featured {
     filter: brightness(285%);
 }
 .portrait {
-    transition: 2s;
     width: 500px;
     height: 500px;
     position:relative;
-    overflow: hidden;
 }
 
 #portraitContainer {
     width: 500px;
     height: 500px;
     position: relative;
+    overflow: hidden;
 }
 
 .portraitLayer
 {
-    transition: 2s;
+    filter: hue-rotate(20deg);
+    transition: 1s;
     position: absolute;
     width:100%;
-    transform: translateY(0%);
 }
 
-img#me {
-    border-radius: 50%;
-    filter: hue-rotate( 
-    19deg);
-    max-width: 500px;
+#portraitFrame {
+    z-index: 2;
+    position: absolute; 
 }
 
+#portrait1,
+#portrait2,
+#portrait3,
+#portrait4,
+#portrait5,
+#portrait6,
+#portrait7,
+#portrait8,
+#portrait9,
+#portrait10,
+#portrait11,
+#portrait12,
+#portrait13,
+#portrait14,
+#portrait15,
+#portrait16,
+#portrait17,
+#portrait18,
+#portrait19,
+#portrait20 {
+    -webkit-transform: translateX(500px);
+    -moz-transform: translateX(500px);
+    -ms-transform: translateX(500px);
+    -o-transform: translateX(500px);
+    transform: translateX(500px) scaleY(0%);
+}
+
+#portrait1 {
+    top:0;
+}
+
+#portrait2 {
+    top:25px;
+}
+
+#portrait3 {
+    top:50px;
+}
+
+#portrait4 {
+    top:75px;
+}
+
+#portrait5 {
+    top:100px;
+}
+
+#portrait6 {
+    top:125px;
+}
+
+#portrait7 {
+    top:150px;
+}
+
+#portrait8 {
+    top:175px;
+}
+
+#portrait9 {
+    top:200px;
+}
+
+#portrait10 {
+    top:225px;
+}
+
+#portrait11 {
+    top:250px;
+}
+
+#portrait12 {
+    top:275px;
+}
+
+#portrait13 {
+    top:300px;
+}
+
+#portrait14 {
+    top:325px;
+}
+
+#portrait15 {
+    top:350px;
+}
+
+#portrait16 {
+    top:375px;
+}
+
+#portrait17 {
+    top:400px;
+}
+
+#portrait18 {
+    top:425px;
+}
+
+#portrait19  {
+    top:450px;
+}
+#portrait20  {
+    top:475px;
+}
 /* PORTFOLIO SLIDER */
 
 .carousel {
@@ -352,7 +463,7 @@ img#me {
     background: var(--SuperDarkGrey);
     counter-increment: gallery-cell;
     align-items: stretch;
-    min-height: 900px;
+    min-height: 800px;
 }
   
 /* FEATURED PORTFOLIO */
@@ -584,10 +695,6 @@ border-left: 1px solid black;
         align-items: center;
     }
 
-    img#me {
-        width: 100%;
-    }
-
     header {
         position: absolute;
     }
@@ -648,9 +755,6 @@ border-left: 1px solid black;
         margin-left: 0px;
     }
 
-    img#me {
-        margin-bottom: 100px;
-    }
     .centerContainer {
         text-align: center;
     }
@@ -680,10 +784,6 @@ border-left: 1px solid black;
 
     .mainHeading {
         font-size: 4em;
-    }
-
-    img#me {
-        width: 100%;
     }
 
     header {
@@ -744,10 +844,6 @@ border-left: 1px solid black;
 
     .statsContainer {
         margin-left: 0px;
-    }
-
-    img#me {
-        margin-bottom: 100px;
     }
 
     .centerContainer {

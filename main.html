@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
- 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" type="text/javascript"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-viewport-checker/1.8.8/jquery.viewportchecker.min.js" type="text/javascript"></script>
@@ -71,51 +70,112 @@
 
     <section>
         <a id="me"></a>
-        <div class="centerContainer center hidden">
+        <div class="centerContainer center portraitTrigger">
             <div id="portraitContainer">
-                <img class="portraitLayer" src="images/portrait/1.png">
-                <img class="portraitLayer" src="images/portrait/2.png">
-                <img class="portraitLayer" src="images/portrait/3.png">
-                <img class="portraitLayer" src="images/portrait/4.png">
-                <img class="portraitLayer" src="images/portrait/5.png">
-                <img class="portraitLayer" src="images/portrait/6.png">
-                <img class="portraitLayer" src="images/portrait/7.png">
-                <img class="portraitLayer" src="images/portrait/8.png">
-                <img class="portraitLayer" src="images/portrait/9.png">
-                <img class="portraitLayer" src="images/portrait/10.png">
-                <img class="portraitLayer" src="images/portrait/11.png">
-                <img class="portraitLayer" src="images/portrait/12.png">
-                <img class="portraitLayer" src="images/portrait/13.png">
-                <img class="portraitLayer" src="images/portrait/14.png">
-                <img class="portraitLayer" src="images/portrait/15.png">
-                <img class="portraitLayer" src="images/portrait/16.png">
-                <img class="portraitLayer" src="images/portrait/17.png">
-                <img class="portraitLayer" src="images/portrait/18.png">
-                <img class="portraitLayer" src="images/portrait/19.png">
-                <img class="portraitLayer" src="images/portrait/20.png">
+                <img id="portraitFrame" src="images/portrait/frame.png">
+                <img id="portrait1" class="portraitLayer" src="images/portrait/1.png">
+                <img id="portrait2" class="portraitLayer" src="images/portrait/2.png">
+                <img id="portrait3" class="portraitLayer" src="images/portrait/3.png">
+                <img id="portrait4" class="portraitLayer" src="images/portrait/4.png">
+                <img id="portrait5" class="portraitLayer" src="images/portrait/5.png">
+                <img id="portrait6" class="portraitLayer" src="images/portrait/6.png">
+                <img id="portrait7" class="portraitLayer" src="images/portrait/7.png">
+                <img id="portrait8" class="portraitLayer" src="images/portrait/8.png">
+                <img id="portrait9" class="portraitLayer" src="images/portrait/9.png">
+                <img id="portrait10" class="portraitLayer" src="images/portrait/10.png">
+                <img id="portrait11" class="portraitLayer" src="images/portrait/11.png">
+                <img id="portrait12" class="portraitLayer" src="images/portrait/12.png">
+                <img id="portrait13" class="portraitLayer" src="images/portrait/13.png">
+                <img id="portrait14" class="portraitLayer" src="images/portrait/14.png">
+                <img id="portrait15" class="portraitLayer" src="images/portrait/15.png">
+                <img id="portrait16" class="portraitLayer" src="images/portrait/16.png">
+                <img id="portrait17" class="portraitLayer" src="images/portrait/17.png">
+                <img id="portrait18" class="portraitLayer" src="images/portrait/18.png">
+                <img id="portrait19" class="portraitLayer" src="images/portrait/19.png">
+                <img id="portrait20" class="portraitLayer" src="images/portrait/20.png">
             </div>    
         </div> 
     </section>  
 
     <section>
         <a id="stats"></a>
-        <div class="centerContainer center hidden">
+        <div id="statContainer" class="centerContainer center">
             <h2 class="headline">My Stats</h2>
-            <h2 class="stats">
-                <span class="statsDescription">HTML:</span>[||||||||||||||||||<span class="backgroundColour">||</span>]<br>
-                <span class="statsDescription">CSS:</span>[|||||||||||||||||<span class="backgroundColour">|||</span>]<br>
-                <span class="statsDescription">Javascript:</span>[|||||||||||||<span class="backgroundColour">|||||||</span>]<br>
-                <span class="statsDescription">Jquery:</span>[|||||||||||||<span class="backgroundColour">|||||||</span>]<br>
-                <span class="statsDescription">Electron:</span>[|||||||||||||<span class="backgroundColour">|||||||</span>]<br>
-                <span class="statsDescription">Node:</span>[|||||||||||||<span class="backgroundColour">|||||||</span>]<br>
-                <span class="statsDescription">Angular:</span>[|||||||||||||<span class="backgroundColour">|||||||</span>]<br>
-                <span class="statsDescription">React:</span>[|||||||||||||<span class="backgroundColour">|||||||</span>]<br>
-                <span class="statsDescription">Vue:</span>[|||<span class="backgroundColour">|||||||||||||||||</span>]<br>
-                <span class="statsDescription">PHP:</span>[|||<span class="backgroundColour">|||||||||||||||||</span>]<br>
-                <span class="statsDescription">Python:</span>[|||||||||||||<span class="backgroundColour">|||||||</span>]<br>
-                <span class="statsDescription">SQL:</span>[||||<span class="backgroundColour">||||||||||||||||</span>]<br>
-                <span class="statsDescription">GIT:</span>[||||||<span class="backgroundColour">||||||||||||||</span>]<br>
-            </h2>
+                <div class="statRow">
+                    <span class="statsDescription">HTML:</span>
+                        <span>[&nbsp;</span>
+                        <span class="html dark ">|</span>
+                        <span class="html dark ">|</span>
+                        <span class="html dark ">|</span>
+                        <span class="html dark ">|</span>
+                        <span class="html dark ">|</span>
+                        <span class="html dark ">|</span>
+                        <span class="html dark ">|</span>
+                        <span class="html dark ">|</span>
+                        <span class="html dark ">|</span>
+                        <span class="html dark ">|</span>
+                        <span class="html dark ">|</span>
+                        <span class="html dark ">|</span>
+                        <span class="html dark ">|</span>
+                        <span class="html dark ">|</span>
+                        <span class="html dark ">|</span>
+                        <span class="html dark ">|</span>
+                        <span class="html dark ">|</span>
+                        <span class="html dark ">|</span>
+                        <span class="html dark ">|</span>
+                        <span class="html dark ">|</span>
+                        <span>&nbsp;]</span>
+                </div>
+                <div class="statRow">
+                    <span class="statsDescription">CSS:</span>
+                        <span>[&nbsp;</span>
+                        <span class="css dark">|</span>
+                        <span class="css dark ">|</span>
+                        <span class="css dark ">|</span>
+                        <span class="css dark ">|</span>
+                        <span class="css dark ">|</span>
+                        <span class="css dark ">|</span>
+                        <span class="css dark ">|</span>
+                        <span class="css dark ">|</span>
+                        <span class="css dark ">|</span>
+                        <span class="css dark ">|</span>
+                        <span class="css dark ">|</span>
+                        <span class="css dark ">|</span>
+                        <span class="css dark ">|</span>
+                        <span class="css dark ">|</span>
+                        <span class="css dark ">|</span>
+                        <span class="css dark ">|</span>
+                        <span class="css dark ">|</span>
+                        <span class="css dark ">|</span>
+                        <span class="css dark ">|</span>
+                        <span class="css dark ">|</span>
+                        <span>&nbsp;]</span>    
+                </div>
+                <div class="statRow">
+                    <span class="statsDescription">Javascript:</span>
+                        <span>[&nbsp;</span>
+                        <span class="javascript dark ">|</span>
+                        <span class="javascript dark ">|</span>
+                        <span class="javascript dark ">|</span>
+                        <span class="javascript dark ">|</span>
+                        <span class="javascript dark ">|</span>
+                        <span class="javascript dark ">|</span>
+                        <span class="javascript dark ">|</span>
+                        <span class="javascript dark ">|</span>
+                        <span class="javascript dark ">|</span>
+                        <span class="javascript dark ">|</span>
+                        <span class="javascript dark ">|</span>
+                        <span class="javascript dark ">|</span>
+                        <span class="javascript dark ">|</span>
+                        <span class="javascript dark ">|</span>
+                        <span class="javascript dark ">|</span>
+                        <span class="javascript dark ">|</span>
+                        <span class="javascript dark ">|</span>
+                        <span class="javascript dark ">|</span>
+                        <span class="javascript dark ">|</span>
+                        <span class="javascript dark ">|</span>
+                        <span>&nbsp;]</span>    
+                </div>
         </div>
     </section>
 
@@ -229,7 +289,9 @@
                     <p class="featureProjectSubTitle">Technologies used:</p>
                     <p class="featureProjectDescription">HTML, CSS, Javascript, Electron, SQL</p>
                 </div>
-                <div class="gitProjectLinkContainer"><a class="menu-item" href="https://github.com/Jason-Smith-Code/" target="_blank">github</a></div>
+                <ul id="verticalMenu">
+                    <li class="gitProjectLinkContainer menu-item-container verticalLinkPadding"><span class="leftBracket">[</span><a class="menu-item" href="https://github.com/Jason-Smith-Code/portfolio-website" target="_blank">github</a><span class="rightBracket">]</span></li>
+                </ul>
             </div>    
 
             <div class="carousel-cell" id="">
@@ -243,7 +305,9 @@
                     <p class="featureProjectSubTitle">Technologies used:</p>
                     <p class="featureProjectDescription">HTML, CSS, Javascript, React</p>
                 </div>
-                <div class="gitProjectLinkContainer"><a class="menu-item" href="https://github.com/Jason-Smith-Code/" target="_blank">github</a></div>
+                <ul id="verticalMenu">
+                    <li class="gitProjectLinkContainer menu-item-container verticalLinkPadding"><span class="leftBracket">[</span><a class="menu-item" href="https://github.com/Jason-Smith-Code/portfolio-website" target="_blank">github</a><span class="rightBracket">]</span></li>
+                </ul>
             </div>    
 
             <div class="carousel-cell" id="">
@@ -257,7 +321,9 @@
                     <p class="featureProjectSubTitle">Technologies used:</p>
                     <p class="featureProjectDescription">HTML, CSS, Javascript</p>
                 </div>
-                <div class="gitProjectLinkContainer"><a class="menu-item" href="https://github.com/Jason-Smith-Code/" target="_blank">github</a></div>
+                <ul id="verticalMenu">
+                    <li class="gitProjectLinkContainer menu-item-container verticalLinkPadding"><span class="leftBracket">[</span><a class="menu-item" href="https://github.com/Jason-Smith-Code/portfolio-website" target="_blank">github</a><span class="rightBracket">]</span></li>
+                </ul>
             </div>    
 
             <div class="carousel-cell" id="">
@@ -271,7 +337,9 @@
                     <p class="featureProjectSubTitle">Technologies used:</p>
                     <p class="featureProjectDescription">HTML, CSS, Javascript</p>
                 </div>
-                <div class="gitProjectLinkContainer"><a class="menu-item" href="https://github.com/Jason-Smith-Code/" target="_blank">github</a></div>
+                <ul id="verticalMenu">
+                    <li class="gitProjectLinkContainer menu-item-container verticalLinkPadding"><span class="leftBracket">[</span><a class="menu-item" href="https://github.com/Jason-Smith-Code/portfolio-website" target="_blank">github</a><span class="rightBracket">]</span></li>
+                </ul>
             </div>    
 
             <div class="carousel-cell" id="">
@@ -285,7 +353,9 @@
                     <p class="featureProjectSubTitle">Technologies used:</p>
                     <p class="featureProjectDescription">HTML, CSS, Javascript</p>
                 </div>
-                <div class="gitProjectLinkContainer"><a class="menu-item" href="https://github.com/Jason-Smith-Code/" target="_blank">github</a></div>
+                <ul id="verticalMenu">
+                    <li class="gitProjectLinkContainer menu-item-container verticalLinkPadding"><span class="leftBracket">[</span><a class="menu-item" href="https://github.com/Jason-Smith-Code/portfolio-website" target="_blank">github</a><span class="rightBracket">]</span></li>
+                </ul>
             </div> 
 
             <div class="carousel-cell" id="">
@@ -299,7 +369,9 @@
                     <p class="featureProjectSubTitle">Technologies used:</p>
                     <p class="featureProjectDescription">HTML, CSS, Javascript</p>
                 </div>
-                <div class="gitProjectLinkContainer"><a class="menu-item" href="https://github.com/Jason-Smith-Code/" target="_blank">github</a></div>
+                <ul id="verticalMenu">
+                    <li class="gitProjectLinkContainer menu-item-container verticalLinkPadding"><span class="leftBracket">[</span><a class="menu-item" href="https://github.com/Jason-Smith-Code/portfolio-website" target="_blank">github</a><span class="rightBracket">]</span></li>
+                </ul>
             </div>    
 
             <div class="carousel-cell" id="">
@@ -313,7 +385,9 @@
                     <p class="featureProjectSubTitle">Technologies used:</p>
                     <p class="featureProjectDescription">HTML, CSS, Javascript</p>
                 </div>
-                <div class="gitProjectLinkContainer"><a class="menu-item" href="https://github.com/Jason-Smith-Code/" target="_blank">github</a></div>
+                <ul id="verticalMenu">
+                    <li class="gitProjectLinkContainer menu-item-container verticalLinkPadding"><span class="leftBracket">[</span><a class="menu-item" href="https://github.com/Jason-Smith-Code/portfolio-website" target="_blank">github</a><span class="rightBracket">]</span></li>
+                </ul>
             </div>    
 
             <div class="carousel-cell" id="">
@@ -327,7 +401,9 @@
                     <p class="featureProjectSubTitle">Technologies used:</p>
                     <p class="featureProjectDescription">HTML, CSS, Javascript</p>
                 </div>
-                <div class="gitProjectLinkContainer"><a class="menu-item" href="https://github.com/Jason-Smith-Code/" target="_blank">github</a></div>
+                <ul id="verticalMenu">
+                    <li class="gitProjectLinkContainer menu-item-container verticalLinkPadding"><span class="leftBracket">[</span><a class="menu-item" href="https://github.com/Jason-Smith-Code/portfolio-website" target="_blank">github</a><span class="rightBracket">]</span></li>
+                </ul>
             </div> 
 
         </div>
@@ -372,7 +448,7 @@
                 </ul>
             </div>
     </footer>
-
+    
     <script src="Javascript/main.js"></script>
     <script>
         var theMobileMenu = document.querySelector('.mobileMenu');
