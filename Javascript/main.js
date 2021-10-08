@@ -265,6 +265,7 @@ function check_if_in_view() {
   });
 
  $.each($stat_container, function() {
+     
     var $element = $(this);
     var element_height = $element.outerHeight();
     var element_top_position = $element.offset().top;
@@ -280,7 +281,7 @@ function check_if_in_view() {
         let cssStatMax = 15;
         var cssCounter = 0;
         var cssInterval = setInterval(function(){
-            console.log(cssCounter)
+            //console.log(cssCounter)
             cssElements[cssCounter].style.opacity = "1";
             cssCounter++;
             if(cssCounter === cssStatMax) {
@@ -288,6 +289,7 @@ function check_if_in_view() {
             }
         }, 100);
 
+    
         let htmlStatMax = 10;
         var htmlCounter = 0;
         var htmlInterval = setInterval(function(){
@@ -307,8 +309,8 @@ function check_if_in_view() {
                     clearInterval(javascriptInterval);
             }
         }, 100);
-  
-    } else {
+
+    } else if (seen === 1) {
 
     }
 

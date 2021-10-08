@@ -131,10 +131,23 @@ $(document).ready(function() {
     }
 
     function moveLocation() {
-        window.location.replace("main.html");
+      window.location.replace("main.html");
     }
     setTimeout(timeOut1, 3000);
     setTimeout(timeOut2, 3500);
     setTimeout(moveLocation, 4500);
+
+});
+
+
+$(document).ready(function () {
+
+    if (!sessionStorage.isVisited) {
+        sessionStorage.isVisited = 'true'
+
+    } else {
+      
+
+    }
 
 });
