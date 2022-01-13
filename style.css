@@ -95,7 +95,7 @@ section {
 
 .statsDescription {
     display: inline-block;
-    width: 180px;
+    width: 200px;
     text-align: left;
     letter-spacing: 3px;
 }
@@ -293,6 +293,7 @@ section#featured {
     display: flex;
     flex-direction: column;
     position: relative;
+    text-align: center;
 }
 
 .center {
@@ -323,17 +324,13 @@ section#featured {
     width:100px;
     filter: brightness(285%);
 }
-.portrait {
-    width: 500px;
-    height: 500px;
-    position:relative;
-}
 
 #portraitContainer {
     width: 500px;
     height: 500px;
     position: relative;
     overflow: hidden;
+    text-align: start;
 }
 
 .portraitLayer
@@ -347,6 +344,9 @@ section#featured {
 #portraitFrame {
     z-index: 2;
     position: absolute; 
+    top:0;
+    left: 0;
+    width:100%;
 }
 
 #portrait1,
@@ -369,11 +369,12 @@ section#featured {
 #portrait18,
 #portrait19,
 #portrait20 {
-    -webkit-transform: translateX(500px);
-    -moz-transform: translateX(500px);
-    -ms-transform: translateX(500px);
-    -o-transform: translateX(500px);
-    transform: translateX(500px) scaleY(0%);
+    -webkit-transform: translateX(100%);
+    -moz-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    -o-transform: translateX(100%);
+    transform: translateX(100%) scaleY(0%);
+    width: 100%;
 }
 
 #portrait1 {
@@ -381,78 +382,82 @@ section#featured {
 }
 
 #portrait2 {
-    top:25px;
+    top:5%;
 }
 
 #portrait3 {
-    top:50px;
+    top:10%;
 }
 
 #portrait4 {
-    top:75px;
+    top:15%;
 }
 
 #portrait5 {
-    top:100px;
+    top:20%;
 }
 
 #portrait6 {
-    top:125px;
+    top:25%;
 }
 
 #portrait7 {
-    top:150px;
+    top:30%;
 }
 
 #portrait8 {
-    top:175px;
+    top:35%;
 }
 
 #portrait9 {
-    top:200px;
+    top:40%;
 }
 
 #portrait10 {
-    top:225px;
+    top:45%;
 }
 
 #portrait11 {
-    top:250px;
+    top:50%;
 }
 
 #portrait12 {
-    top:275px;
+    top:55%;
 }
 
 #portrait13 {
-    top:300px;
+    top:60%;
 }
 
 #portrait14 {
-    top:325px;
+    top:65%;
 }
 
 #portrait15 {
-    top:350px;
+    top:70%;
 }
 
 #portrait16 {
-    top:375px;
+    top:75%;
 }
 
 #portrait17 {
-    top:400px;
+    top:80%;
 }
 
 #portrait18 {
-    top:425px;
+    top:85%;
 }
 
 #portrait19  {
-    top:450px;
+    top:90%;
 }
 #portrait20  {
-    top:475px;
+    top:95%;
+}
+
+.stat-text {
+    margin-top: 50px;
 }
 /* PORTFOLIO SLIDER */
 
@@ -682,7 +687,12 @@ border-left: 1px solid black;
 
 /* MOBILE OPTIMISATION */
 
-@media only screen and (min-width: 0px) and (max-width: 480px) {
+@media only screen and (min-width: 1px) and (max-width: 480px) {
+
+    #portraitContainer {
+        width: 300px;
+        height: 300px;
+    }
 
     .statsDescription {
         width: 140px;
@@ -783,6 +793,47 @@ border-left: 1px solid black;
         margin-bottom: 100px;
     }
 
+    .statRow {
+        font-size: 1.5em;
+    }
+
+    .carousel-cell {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        cursor: grab;
+        padding: 5px;
+        border-radius: 10px 30px;
+        border: 3px solid var(--text);
+        width: 250px;
+        margin-right: 50px;
+        background: var(--SuperDarkGrey);
+        counter-increment: gallery-cell;
+        align-items: stretch;
+        min-height: 500px;
+    }
+
+    .portfolioImage {
+        border-radius: 5px 25px 0 0;
+    }
+
+    .featureProjectTitle {
+        font-size: 20px;
+        margin-bottom: 0px;
+        letter-spacing: 3px;
+    }
+
+    .featureProjectSubTitle {
+        font-size: 16px;
+    }
+
+    .gitProjectLinkContainer {
+        font-size: 16px;
+    }
+    .featureProjectDescription {
+        font-size: 16px;
+    }
+
 }
 
 @media only screen and (min-width: 481px) and (max-width: 768px) {
@@ -873,6 +924,43 @@ border-left: 1px solid black;
 
     .mobile-space {
         margin-bottom: 100px;
+    }
+
+    .carousel-cell {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        cursor: grab;
+        padding: 25px;
+        border-radius: 20px 60px;
+        border: 6px solid var(--text);
+        width: 350px;
+        margin-right: 50px;
+        background: var(--SuperDarkGrey);
+        counter-increment: gallery-cell;
+        align-items: stretch;
+        min-height: 600px;
+    }
+
+    .portfolioImage {
+        border-radius: 10px 50px 0 0;
+    }
+
+    .featureProjectTitle {
+        font-size: 20px;
+        margin-bottom: 0px;
+        letter-spacing: 3px;
+    }
+
+    .featureProjectSubTitle {
+        font-size: 16px;
+    }
+
+    .gitProjectLinkContainer {
+        font-size: 16px;
+    }
+    .featureProjectDescription {
+        font-size: 16px;
     }
 
 }
