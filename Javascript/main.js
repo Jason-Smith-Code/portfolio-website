@@ -309,11 +309,7 @@ function check_if_in_view() {
                     clearInterval(javascriptInterval);
             }
         }, 100);
-
-    } else if (seen === 1) {
-
     }
-
   });
 }
 
