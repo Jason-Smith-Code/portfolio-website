@@ -751,6 +751,7 @@ border-left: 1px solid black;
     }
 
     #footer-section {
+        padding: 50px 10px 50px 10px;
         width: 100%;
     }
 
