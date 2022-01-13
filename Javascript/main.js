@@ -277,11 +277,16 @@ function check_if_in_view() {
         const cssElements = document.getElementsByClassName("css");
         const htmlElements = document.getElementsByClassName("html");
         const javascriptElements = document.getElementsByClassName("javascript");
+        const reactElements = document.getElementsByClassName("react");
+        const reduxElements = document.getElementsByClassName("redux");
+        const reactReduxElements = document.getElementsByClassName("react-redux");
+        const reduxToolkitElements = document.getElementsByClassName("redux-toolkit");
+        const nodeElements = document.getElementsByClassName("node");
+        const gitElements = document.getElementsByClassName("git");
 
         let cssStatMax = 15;
         var cssCounter = 0;
         var cssInterval = setInterval(function(){
-            //console.log(cssCounter)
             cssElements[cssCounter].style.opacity = "1";
             cssCounter++;
             if(cssCounter === cssStatMax) {
@@ -290,7 +295,7 @@ function check_if_in_view() {
         }, 100);
 
     
-        let htmlStatMax = 10;
+        let htmlStatMax = 14;
         var htmlCounter = 0;
         var htmlInterval = setInterval(function(){
             htmlElements[htmlCounter].style.opacity = "1";
@@ -309,6 +314,67 @@ function check_if_in_view() {
                     clearInterval(javascriptInterval);
             }
         }, 100);
+
+        let reactStatMax = 7;
+        var reactCounter = 0;
+        var reactInterval = setInterval(function(){
+            reactElements[reactCounter].style.opacity = "1";
+            reactCounter++;
+                if(reactCounter === reactStatMax) {
+                    clearInterval(reactInterval);
+            }
+        }, 100);
+
+        let reduxStatMax = 4;
+        var reduxCounter = 0;
+        var reduxInterval = setInterval(function(){
+            reduxElements[reduxCounter].style.opacity = "1";
+            reduxCounter++;
+                if(reduxCounter === reduxStatMax) {
+                    clearInterval(reduxInterval);
+            }
+        }, 100);
+
+        let reactReduxStatMax = 5;
+        var reactReduxCounter = 0;
+        var reactReduxInterval = setInterval(function(){
+            reactReduxElements[reactReduxCounter].style.opacity = "1";
+            reactReduxCounter++;
+                if(reactReduxCounter === reactReduxStatMax) {
+                    clearInterval(reactReduxInterval);
+            }
+        }, 100);
+
+        let reduxToolkitStatMax = 6;
+        var reduxToolkitCounter = 0;
+        var reduxToolkitInterval = setInterval(function(){
+            reduxToolkitElements[reduxToolkitCounter].style.opacity = "1";
+            reduxToolkitCounter++;
+                if(reduxToolkitCounter === reduxToolkitStatMax) {
+                    clearInterval(reduxToolkitInterval);
+            }
+        }, 100);
+
+        let nodeStatMax = 4;
+        var nodeCounter = 0;
+        var nodeInterval = setInterval(function(){
+            nodeElements[nodeCounter].style.opacity = "1";
+            nodeCounter++;
+                if(nodeCounter === nodeStatMax) {
+                    clearInterval(nodeInterval);
+            }
+        }, 100);
+
+        let gitStatMax = 12;
+        var gitCounter = 0;
+        var gitInterval = setInterval(function(){
+            gitElements[gitCounter].style.opacity = "1";
+            gitCounter++;
+                if(gitCounter === gitStatMax) {
+                    clearInterval(gitInterval);
+            }
+        }, 100);
+
     }
   });
 }

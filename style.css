@@ -20,18 +20,15 @@
 * {
     box-sizing: border-box;
     margin:0;
+    padding:0;
 }
 
 html {
-    margin: 0;
-    padding: 0;
     scroll-behavior: smooth;
 }
 
 body {
     background-color: var(--SuperDarkGrey);
-    margin: 0;
-    font-size: 1.2em;
 }
 
 header {
@@ -95,7 +92,7 @@ section {
 
 .statsDescription {
     display: inline-block;
-    width: 200px;
+    width: 220px;
     text-align: left;
     letter-spacing: 3px;
 }
@@ -112,7 +109,11 @@ section {
     opacity: .1;
 }
 
-.css, .html, .javascript {
+.left-aligned-text {
+    text-align: left;
+}
+
+.css, .html, .javascript, .react, .redux, .react-redux, .redux-toolkit, .git, .node {
     transition: 1s;
 }
 
@@ -212,8 +213,6 @@ a.textLink {
 
 ul {
     list-style-type: none;
-    margin: 0;
-    padding: 0;
 }
 
 .menu-item-container {
@@ -314,10 +313,6 @@ section#featured {
     justify-content: center;
 }
 
-.text-block {
-    margin-bottom:100px;
-}
-
 #logo {
     position: absolute;
     margin:10px;
@@ -342,7 +337,7 @@ section#featured {
 }
 
 #portraitFrame {
-    z-index: 2;
+    z-index: 1;
     position: absolute; 
     top:0;
     left: 0;
