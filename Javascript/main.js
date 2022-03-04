@@ -18,13 +18,8 @@ var flkty = new Flickity( elem, {
     pageDots: false,
 });
 
-var flkty = new Flickity( '.carousel', {
-    // options go here, check documentation
-});
-
 //Cache reference to window and animation items
 var $animation_elements = $('.hidden');
-var $portrait_elements = $('.portraitTrigger');
 var $stat_container = $('#statContainer');
 var $window = $(window);
 
@@ -45,31 +40,6 @@ function check_if_in_view() {
     } else {
         $element.addClass('hidden');
         $element.removeClass('fade-in-element');
-    }
-  });
-
-  $.each($portrait_elements, function() { 
-    var interval = 50;  
-    var $element = $(this);
-    var element_height = $element.outerHeight();
-    var element_top_position = $element.offset().top;
-    var element_bottom_position = (element_top_position + element_height);
-    //check to see if this current container is within viewport
-    if ((element_bottom_position >= window_top_position) && (element_top_position <= window_bottom_position)) {
-
-                for (let i = 0; i < 20; i++) {
-                    setTimeout(function () {
-                        $( "#portraitContainer" ).find( `#portrait${i+1}` ).css({
-                            '-webkit-transform' : 'translateX(0%)',
-                            '-moz-transform'    : 'translateX(0%)',
-                            '-ms-transform'     : 'translateX(0%)',
-                            '-o-transform'      : 'translateX(0%)',
-                            'transform'         : 'translateX(0%)'
-                        });
-                    }, i* interval) 
-                }
-    } else {
-
     }
   });
 
