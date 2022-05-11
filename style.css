@@ -54,7 +54,7 @@ body {
     animation: large-fade-right 1s;
 }
 
-.css, .html, .javascript, .react, .redux, .react-redux, .redux-toolkit, .git, .node {
+.css, .html, .javascript, .react, .redux, .react-redux, .redux-toolkit, .git, .node, .jest {
     transition: 1s;
 }
 
@@ -167,6 +167,15 @@ ul {
 /* ------------------------------------------------------------------------------------------------------------------------------ */
 
 @media only screen and (min-width: 0px) {
+
+    #image-me {
+        width: 100%;
+        border-radius: 50%;
+        max-width: 500px;
+        margin: 0 20px;
+        filter: hue-rotate(25deg);
+    }
+
     header {
         z-index: 2;
         top: 0;
@@ -174,10 +183,20 @@ ul {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        padding: 20px;
+    }
+
+    nav#desktopMenu {
+        margin-right: 10px;
+    }
+
+    .git-hub-link-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     #logo {
+        margin: 10px;
         position: absolute;
         width:100px;
         filter: brightness(285%);
@@ -215,6 +234,11 @@ ul {
         width: 100%;
     }
 
+    .intro-container {
+        max-width: 600px;
+        margin: 0 20px;
+    }
+
     .flex-row {
         display: flex;
         flex-direction: column;
@@ -245,23 +269,19 @@ ul {
         min-height: 500px;
     }
 
-    .portfolioImage {
-        border-radius: 5px 25px 0 0;
-    }
-
-    .featureProjectTitle {
-        font-size: 20px;
-        margin-bottom: 0px;
-        letter-spacing: 3px;
-    }
-
-    .featureProjectSubTitle {
-        font-size: 16px;
-    }
-
     .gitProjectLinkContainer {
-        font-size: 16px;
+        font-size: 1.5em;
     }
+
+    .git-hub-link {
+        padding-left: 30px;
+        padding-right: 30px;
+        letter-spacing: 3px;
+        font-size: 1.5em;
+        text-transform: uppercase;
+    }
+
+
     .featureProjectDescription {
         font-size: 16px;
     }
@@ -386,37 +406,18 @@ ul {
         padding-bottom: 200px;
         outline:none;
         overflow: hidden;
-      }
-      
-      .carousel-cell {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        cursor: grab;
-        padding: 25px;
-        border-radius: 25px 100px;
-        width: 500px;
-        margin-right: 50px;
-        background: var(--SuperDarkGrey);
-        counter-increment: gallery-cell;
-        align-items: stretch;
-        min-height: 800px;
     }
       
     /* FEATURED PORTFOLIO */
-    
-    .portfolioImage {
-        width: 100%;
-        border-radius:10px 75px 0 0;
-    }
     
     .featureProjectTitle {
         color: white;
         font-family: 'tekolight', Arial, Helvetica, sans-serif;
         text-transform: uppercase;
-        font-size: 3em;
-        margin-bottom: 25px;
+        font-size: 2em;
+        margin: 25px 0;
         letter-spacing: 3px;
+        line-height: 0.9;
     }
     
     .featureProjectSubTitle {
@@ -431,11 +432,6 @@ ul {
         color: white;
         font-size: 1em;
         margin-bottom: 25px;
-    }
-    
-    .gitProjectLinkContainer {
-        font-size:2em;
-        bottom: 20px;
     }
     
     /* FOOTER */
@@ -597,7 +593,7 @@ ul {
 
     .statsDescription {
         display: inline-block;
-        width: 150px;
+        width: 180px;
         text-align: left;
         letter-spacing: 3px;
     }
@@ -623,9 +619,19 @@ ul {
         margin: auto;
     }
 
+    .portfolioImage {
+        width: 100%;
+        border-radius: 5px 25px 0 0;
+    }
+
 }
 
 @media only screen and (min-width: 500px) {
+
+    .statRow {
+        font-size: 2em;
+    }
+
     .textBlock {
         max-width: 600px;
     }
@@ -657,18 +663,10 @@ ul {
     }
 
     .carousel-cell {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        cursor: grab;
         padding: 25px;
         border-radius: 20px 60px;
         border: 6px solid var(--text);
         width: 350px;
-        margin-right: 50px;
-        background: var(--SuperDarkGrey);
-        counter-increment: gallery-cell;
-        align-items: stretch;
         min-height: 600px;
     }
 
@@ -676,19 +674,6 @@ ul {
         border-radius: 10px 50px 0 0;
     }
 
-    .featureProjectTitle {
-        font-size: 20px;
-        margin-bottom: 0px;
-        letter-spacing: 3px;
-    }
-
-    .featureProjectSubTitle {
-        font-size: 16px;
-    }
-
-    .gitProjectLinkContainer {
-        font-size: 16px;
-    }
     .featureProjectDescription {
         font-size: 16px;
     }
@@ -710,6 +695,18 @@ ul {
     .textBlock {
         max-width: 600px;
     }
+
+    .carousel-cell {
+        padding: 25px;
+        border-radius: 20px 60px;
+        border: 6px solid var(--text);
+        width: 350px;
+        min-height: 600px;
+    }
+
+    .portfolioImage {
+        border-radius: 10px 50px 0 0;
+    }
 }
 
 @media only screen and (min-width: 1024px) {
@@ -719,9 +716,29 @@ ul {
     .footer-block {
         width: 25%;
     }  
+
+    .carousel-cell {
+        padding: 25px;
+        border-radius: 20px 75px;
+        border: 6px solid var(--text);
+        width: 400px;
+        min-height: 700px;
+    }
+
+    .portfolioImage {
+        border-radius: 10px 50px 0 0;
+    }
 }
 
 @media only screen and (min-width: 1266px) {
+
+    .carousel-cell {
+        border-radius: 25px 100px;
+        border: 10px solid var(--text);
+        width: 500px;
+        min-height: 800px;
+    }
+
     #menu {
         display: flex;
         flex-direction: row;
@@ -739,6 +756,18 @@ ul {
     header {
         position: fixed;
         background-color: var(--SuperDarkGrey);
+    }
+
+    .portfolioImage {
+        border-radius: 10px 75px 0 0;
+    }
+
+    .gitProjectLinkContainer {
+        font-size: 2em;
+    }
+
+    .featureProjectTitle {
+        font-size: 3em;
     }
 
 }
